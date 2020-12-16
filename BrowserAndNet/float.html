@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1{
+            background-color: red
+        }
+        .container2{
+            background-color: green
+        }
+        .container3{
+            background-color: yellow;
+            margin-top: 100px;
+        }
+        .inline{
+            display: inline;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            line-height: 100px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+        .float{
+            float: left;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 行内元素会排列在浮动元素周围 -->
+    <div class="container1">
+        <div class="box inline">1</div>
+        <div class="box float inline">2</div>
+        <div class="box inline">3</div>
+    </div>
+    <!-- 浮动元素会占据一部分行框 -->
+    <div class="container2">
+        <div class="box inline">1</div>
+        <div class="box float inline">2</div>
+        <div class="box inline">3</div>
+    </div>
+
+    <!-- 浮动元素会占据一部分行框,但是悬浮在Block上 -->
+    <div class="container3">
+        <div class="box">1</div>
+        <div class="box float">2</div>
+        <div class="box">3</div>
+    </div>
+</body>
+</html>

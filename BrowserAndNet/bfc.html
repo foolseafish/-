@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1{
+            background-color: red;
+            overflow: hidden;
+        }
+        .container2{
+            background-color: green;
+            margin-top:100px;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            line-height: 100px;
+            text-align: center;
+            border: 1px solid #000;
+            margin: 20px 0;
+        }
+        .rest{
+            height: 200px;
+            background: #ccc;
+            overflow: hidden;
+        }
+        .float{
+            float: left;
+        }
+        .floatright{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <!-- bfc 解决float高度塌陷-->
+    <div class="container1">
+        <div class="box">1</div>
+        <!-- 内部Block,margin重叠 -->
+        <div class="box">2</div>
+        <!-- float margin不重叠 -->
+        <div class="box float">3</div>
+    </div>
+    <!-- BFC实现三列自适应 -->
+    <div class="container2">
+        <div class="box float">1</div> 
+        <div class="box floatright">2</div>
+        <div class="rest">气味儿二二二二二二二气味儿二二二二二二二气味儿二二二二二二二气味儿二二二二二二二</div>       
+    </div>
+
+</body>
+</html>
